@@ -1,10 +1,10 @@
 P.164~
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┍ Select (검색) → DQL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┍ Select (검색) → DQL <br>
 DML  ┝ Update (갱신) ┒
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┝ Insert &nbsp;(삽입)&nbsp;&nbsp;┣→ DML
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┕ Delete (삭제)&nbsp; ┚
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(오라클에서는 나눠서 표현한다)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┝ Insert &nbsp;(삽입)&nbsp;&nbsp;┣→ DML <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┕ Delete (삭제)&nbsp; ┚ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(오라클에서는 나눠서 표현한다) <br>
 
 ## TCL (DCL의 일종)
 COMMIT - 트랜잭션 종료
@@ -28,7 +28,7 @@ abort 비정상적인 종료? 종료 전 트랜잭션이 사라짐
 > 원본 DB를 copy 한 것
 
 ┍ single user system
-┕ multi user system┍ multi programming : 1 CPU, many PG
+┕ multi user system┍ multi programming : 1 CPU, many PG <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┕ multi processing
 
 - Program
