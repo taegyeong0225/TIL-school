@@ -27,9 +27,9 @@ abort 비정상적인 종료? 종료 전 트랜잭션이 사라짐
 
 > 원본 DB를 copy 한 것
 
-┍ single user system
+┍ single user system <br>
 ┕ multi user system┍ multi programming : 1 CPU, many PG <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┕ multi processing
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┕ multi processing <br>
 
 - Program
 - process
@@ -56,17 +56,18 @@ CPU이 서비스를 다 해주면 time out! 맨 뒤로 간다
 - 기다리는 프로그램은 wait 상태
 - CPU의 서비스를 받고 있는 프로그램은 running 상태
 
-![](https://velog.velcdn.com/images/taegyeong0225/post/4ec338e8-3e7a-401a-9cfe-a8b0afa715b2/image.png) 생성 : 실행
-준비 : queue에 있는 것, wait
-실행 : cpu의 서비스를 받는 상태
-wait → running : 디스패치
-대기(보류) : CPU의 서비스를 받으려면 PG와 data는 Memory에 있어야 한다. 근데 실제 모든 프로그램은 디스크(virtual memory)에 있다. PG 전체가 메모리에 들어갈 수 없다. → 프로그램을 일정 단위로 쪼갬 (=page)
-다음 페이지가 메모리에 올라오지 않으면 cpu가 놀게 된다 → 보류 상태
-I/O channer이 다음 페이지를 올리고 CPU에게 보고 (=interrupt) 후 보류(block)에서 준비(ready) 상태로 이동
+![](https://velog.velcdn.com/images/taegyeong0225/post/4ec338e8-3e7a-401a-9cfe-a8b0afa715b2/image.png) <br>
+생성 : 실행 <br>
+준비 : queue에 있는 것, wait <br>
+실행 : cpu의 서비스를 받는 상태 <br>
+wait → running : 디스패치 <br>
+대기(보류) : CPU의 서비스를 받으려면 PG와 data는 Memory에 있어야 한다. 근데 실제 모든 프로그램은 디스크(virtual memory)에 있다. PG 전체가 메모리에 들어갈 수 없다. → 프로그램을 일정 단위로 쪼갬 (=page) <br>
+다음 페이지가 메모리에 올라오지 않으면 cpu가 놀게 된다 → 보류 상태 <br>
+I/O channer이 다음 페이지를 올리고 CPU에게 보고 (=interrupt) 후 보류(block)에서 준비(ready) 상태로 이동 <br>
 
-프로그램 1 ┒
-프로그램 2 ┣ [Queue] ─ CPU 
-프로그램 3 ┚
+프로그램 1 ┒ <br>
+프로그램 2 ┣ [Queue] ─ CPU  <br>
+프로그램 3 ┚ <br>
 
 |CPU|
 |---|
@@ -88,7 +89,7 @@ time out 후 메모리에 page가 없을 경우 CPU가 I/O channer가 page in을
 
 memory가 꽉 찼을 때 뭘 내릴지? → 스케줄링의 한 방법 (쉬운건 FIFO)
 
-![](https://velog.velcdn.com/images/taegyeong0225/post/49d095f6-353e-4052-8bb5-fcd08105916e/image.png)
+![](https://velog.velcdn.com/images/taegyeong0225/post/49d095f6-353e-4052-8bb5-fcd08105916e/image.png) <br>
 
 \* block에서 ready로 못 감
 
